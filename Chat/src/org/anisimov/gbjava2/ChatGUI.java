@@ -13,7 +13,7 @@ public class ChatGUI extends JFrame {
 	String roomName = "Default Room";
 
 	public ChatGUI() throws HeadlessException {
-		 setTitle("-=Anonimous_Chat=- " + roomName + " ::" + nickName + "::");
+		 setTitle("-=Anonimous_Chat=- ::" + nickName + "::");
 	     setDefaultCloseOperation(EXIT_ON_CLOSE);
 	     setSize(620, 480);
 	     setLocationRelativeTo(null);
@@ -96,8 +96,8 @@ public class ChatGUI extends JFrame {
 	                JPanel jPanelNewRoom = new JPanel(new FlowLayout());
 	                JLabel jLabelRoom = new JLabel("Room name:          ");
 	                JLabel jLabelPassword = new JLabel("Room password: ");
-	                JTextField jTextFieldRoomName = new JTextField("Enter Room Name ");
-	                JTextField jTextFieldPassword = new JTextField("Enter Password      ");
+	                JTextField jTextFieldRoomName = new JTextField("< Enter Room Name >");
+	                JTextField jTextFieldPassword = new JTextField("<   Enter Password    >");
 	                JButton jButtonOk = new JButton("    Ok    ");
 	                JButton jButtonCancel = new JButton("Cancel");
 	                newRoomFrame.add(jPanelNewRoom);
