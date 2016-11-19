@@ -10,9 +10,10 @@ public class ChatGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	String nickName = "Guest";
+	String roomName = "Default Room";
 
 	public ChatGUI() throws HeadlessException {
-		 setTitle("-=Anonimous_Chat=- ::" + nickName + "::");
+		 setTitle("-=Anonimous_Chat=- " + roomName + " ::" + nickName + "::");
 	     setDefaultCloseOperation(EXIT_ON_CLOSE);
 	     setSize(620, 480);
 	     setLocationRelativeTo(null);
@@ -83,6 +84,33 @@ public class ChatGUI extends JFrame {
 	     
 	     jMenuBar.add(jMenuChat);
 	     jMenuChat.add(jMenuItemNewRoom);
+	     jMenuItemNewRoom.addActionListener(new ActionListener() {
+	            @Override
+	            public void actionPerformed(final ActionEvent e) {
+	                JFrame newRoomFrame = new JFrame();
+	                newRoomFrame.setTitle("Create New Room");
+	                newRoomFrame.setSize(250, 115);
+	                newRoomFrame.setVisible(true);
+	                newRoomFrame.setLocationRelativeTo(null);
+	                newRoomFrame.setResizable(false);
+	                JPanel jPanelNewRoom = new JPanel(new FlowLayout());
+	                JLabel jLabelRoom = new JLabel("Room name:          ");
+	                JLabel jLabelPassword = new JLabel("Room password: ");
+	                JTextField jTextFieldRoomName = new JTextField("Enter Room Name ");
+	                JTextField jTextFieldPassword = new JTextField("Enter Password      ");
+	                JButton jButtonOk = new JButton("    Ok    ");
+	                JButton jButtonCancel = new JButton("Cancel");
+	                newRoomFrame.add(jPanelNewRoom);
+	                jPanelNewRoom.add(jLabelRoom);
+	                jPanelNewRoom.add(jTextFieldRoomName);
+	                jTextFieldRoomName.setMaximumSize(new Dimension(100, 27));
+	                jPanelNewRoom.add(jLabelPassword);
+	                jPanelNewRoom.add(jTextFieldPassword);
+	                jTextFieldPassword.setMaximumSize(new Dimension(100, 27));
+	                jPanelNewRoom.add(jButtonOk);
+	                jPanelNewRoom.add(jButtonCancel);
+	            }
+	        });
 	     jMenuChat.add(jMenuItemInvite);
 	     jMenuChat.add(jMenuItemEnterRoom);
 	     jMenuChat.add(jMenuItemLeaveRoom);
