@@ -31,7 +31,6 @@ public class ChatGUI extends JFrame {
 	     JTextField jTextField = new JTextField();
 	     JLabel jLabel = new JLabel("Value:");
 	     jLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-	     //JScrollPane jScrollTextField = new JScrollPane(jTextField);
 	     JSlider jSlider = new JSlider(0, 100);
 	     jSlider.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     jSlider.setValue(50);
