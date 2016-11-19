@@ -9,11 +9,11 @@ public class ChatGUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	
-	String nickName = "Guest";
+	String nickName;
 	String roomName = "Default Room";
 
-	public ChatGUI() throws HeadlessException {
-		 setTitle("-=Anonimous_Chat=- ::" + nickName + "::");
+	public ChatGUI(String window, String nickName) throws HeadlessException {
+		 super(window + "  ::" + nickName + "::");
 	     setDefaultCloseOperation(EXIT_ON_CLOSE);
 	     setSize(620, 480);
 	     setLocationRelativeTo(null);
