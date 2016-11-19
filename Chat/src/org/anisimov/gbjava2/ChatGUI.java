@@ -8,9 +8,11 @@ import java.awt.event.*;
 public class ChatGUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
+	
+	String nickName = "Guest";
 
 	public ChatGUI() throws HeadlessException {
-		 setTitle("-=Anonimous_Chat=-");
+		 setTitle("-=Anonimous_Chat=- ::" + nickName + "::");
 	     setDefaultCloseOperation(EXIT_ON_CLOSE);
 	     setSize(620, 480);
 	     setLocationRelativeTo(null);
@@ -18,7 +20,7 @@ public class ChatGUI extends JFrame {
 	     JPanel jPanel = new JPanel();
 	     jPanel.setLayout(new BoxLayout(jPanel, BoxLayout.Y_AXIS));
 	     
-//Main chat panel====================================================================
+//Main chat Textpanel====================================================================
 	     JPanel jPanel1 = new JPanel(new BorderLayout());
 	     JTextArea jTextArea = new JTextArea();
 	     jTextArea.setEditable(false);
