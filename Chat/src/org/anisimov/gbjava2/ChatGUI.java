@@ -112,7 +112,55 @@ public class ChatGUI extends JFrame {
 	            }
 	        });
 	     jMenuChat.add(jMenuItemInvite);
+	     jMenuItemInvite.addActionListener(new ActionListener(){
+	    	 @Override
+	    	 public void actionPerformed(final ActionEvent e) {
+	    	 		JFrame inviteRoomFrame = new JFrame();
+	    	 		inviteRoomFrame.setTitle("Invite User to Room");
+	    	 		inviteRoomFrame.setSize(250, 100);
+	    	 		inviteRoomFrame.setLocationRelativeTo(null);
+	    	 		inviteRoomFrame.setVisible(true);
+	    	 		inviteRoomFrame.setResizable(false);
+	    	 		JPanel jPanelInviteRoom = new JPanel(new FlowLayout());
+	    	 		JLabel jLabelUserNickname = new JLabel("User nickname: ");
+	    	 		JTextField jTextFieldUserNickname = new JTextField("<Enter User Nickname>");
+	    	 		JButton jButtonOk = new JButton("    Ok    ");
+	                JButton jButtonCancel = new JButton("Cancel");
+	                inviteRoomFrame.add(jPanelInviteRoom);
+	                jPanelInviteRoom.add(jLabelUserNickname);
+	                jPanelInviteRoom.add(jTextFieldUserNickname);
+	                jPanelInviteRoom.add(jButtonOk);
+	                jPanelInviteRoom.add(jButtonCancel);
+	    	 	}
+	     	});
 	     jMenuChat.add(jMenuItemEnterRoom);
+	     jMenuItemEnterRoom.addActionListener(new ActionListener() {
+	            @Override
+	            public void actionPerformed(final ActionEvent e) {
+	                JFrame enterRoomFrame = new JFrame();
+	                enterRoomFrame.setTitle("Enter in the Room");
+	                enterRoomFrame.setSize(250, 115);
+	                enterRoomFrame.setVisible(true);
+	                enterRoomFrame.setLocationRelativeTo(null);
+	                enterRoomFrame.setResizable(false);
+	                JPanel jPanelEnterRoom = new JPanel(new FlowLayout());
+	                JLabel jLabelRoom = new JLabel("Room name:          ");
+	                JLabel jLabelPassword = new JLabel("Room password: ");
+	                JTextField jTextFieldRoomName = new JTextField("< Enter Room Name >");
+	                JTextField jTextFieldPassword = new JTextField("<   Enter Password    >");
+	                JButton jButtonOk = new JButton("    Ok    ");
+	                JButton jButtonCancel = new JButton("Cancel");
+	                enterRoomFrame.add(jPanelEnterRoom);
+	                jPanelEnterRoom.add(jLabelRoom);
+	                jPanelEnterRoom.add(jTextFieldRoomName);
+	                jTextFieldRoomName.setMaximumSize(new Dimension(100, 27));
+	                jPanelEnterRoom.add(jLabelPassword);
+	                jPanelEnterRoom.add(jTextFieldPassword);
+	                jTextFieldPassword.setMaximumSize(new Dimension(100, 27));
+	                jPanelEnterRoom.add(jButtonOk);
+	                jPanelEnterRoom.add(jButtonCancel);
+	            }
+	        });
 	     jMenuChat.add(jMenuItemLeaveRoom);
 	     jMenuChat.addSeparator();
 	     jMenuChat.add(jMenuItemExitChat);
