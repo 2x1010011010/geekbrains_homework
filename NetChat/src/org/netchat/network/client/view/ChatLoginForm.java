@@ -11,7 +11,8 @@ import java.util.StringTokenizer;
 
 public class ChatLoginForm extends JFrame {
 
-    private JLabel infoLabel;
+	private static final long serialVersionUID = 1L;
+	private JLabel infoLabel;
     private JButton conectButton;
 
     private Client client;

@@ -51,11 +51,11 @@ public class ServerForm extends JFrame implements ServerView {
         setTitle("Server chat room");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(450, 600);
-        setLocationRelativeTo(null); //создаст окно на середине
+        setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
         Color backColor = new Color(224, 224, 224);
-        Font font = new Font("Arial", Font.PLAIN, 24);
+        Font font = new Font("Arial", Font.PLAIN, 16);
 
         this.userTableModel = new DefaultTableModel(new String[]{"ID", "LOGIN"}, 0);
         this.userTable = new JTable(this.userTableModel);

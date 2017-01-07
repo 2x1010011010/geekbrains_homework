@@ -16,7 +16,11 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
 public class ChatClientForm extends JFrame implements ClientView {
-    public static final Color SEND_MSG = new Color(255, 165, 0);
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final Color SEND_MSG = new Color(255, 165, 0);
     public static final Color RECEIVE_MSG = new Color(60, 179, 113);
     public static final Color ERROR_MSG = new Color(178, 34, 34);
 
